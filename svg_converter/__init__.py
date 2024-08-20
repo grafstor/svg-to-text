@@ -40,9 +40,9 @@ class Converter:
 
     def open(self, path):
         doc = minidom.parse(path)
-
-        path = doc.getElementsByTagName('path')[0]
-        d = path.getAttribute('d')
+        d = ""
+        for path in doc.getElementsByTagName('path'):
+            d += path.getAttribute('d') + " "
 
         svg = doc.getElementsByTagName('svg')
 
