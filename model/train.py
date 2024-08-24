@@ -109,9 +109,11 @@ def train(model,
                 save_checkpoint(save_path,
                                 'epoch',
                                 f'{step}',
-                                model,
-                                opt,
-                                loss.item())
+                                model=model,
+                                opt=opt,
+                                step=step,
+                                loss=loss.item(),
+                                )
 
             if step%100 == 0:
                 with torch.no_grad():

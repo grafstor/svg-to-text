@@ -165,3 +165,4 @@ dataset/
 dataset2k/
 
 test*.ipynb
+tmp*.fnt

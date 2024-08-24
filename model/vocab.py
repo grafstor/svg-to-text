@@ -19,7 +19,7 @@ class Vocab:
 
     @staticmethod
     def from_lines(lines, bos="_BOS_", eos="_EOS_", unk='_UNK_'):
-        flat_lines = '\n'.join(list(lines)).split()
+        flat_lines = ' '.join(list(lines)).split()
         tokens = sorted(set(flat_lines))
         tokens = [t for t in tokens if t not in (bos, eos, unk) and len(t)]
         tokens = [bos, eos, unk] + tokens
