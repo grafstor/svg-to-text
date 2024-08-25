@@ -10,7 +10,7 @@ def apply_random_adj(vec):
 
 def apply_random_roll(vec):
     active_dots = vec[:,-1] == -1
-    random_roll = random.randint(0, active_dots.sum())
+    random_roll = random.randint(0, active_dots.sum()-1)
 
     vec[active_dots] = vec[active_dots].roll(random_roll, 0)
 

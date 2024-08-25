@@ -147,7 +147,7 @@ def train(model,
                     plot_metrics(metrics)
 
                     try:
-                        sample(converter, model, test_dl, p_value=0.5)
+                        sample(converter, model, test_dl,device=device, p_value=0.5)
                     except:
                         pass
 
